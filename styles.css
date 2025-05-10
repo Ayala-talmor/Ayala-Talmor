@@ -1,0 +1,258 @@
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+ 
+body, p, li, a, input, textarea {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #a35d6a;
+}
+.top-container {
+    background: linear-gradient(to bottom right, #f6d3d8, #e9b4bc);
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+    border-bottom-left-radius: 80% 20%;
+    border-bottom-right-radius: 80% 20%;
+  }
+  
+  .title-text {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .title-flex {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .title-flex h1 {
+    font-size: 3.5em;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    position: relative;
+  }
+  
+  .plane-from-name {
+    position: absolute;
+    top: -0.5em; 
+    right: -60px;
+    width: 70px;
+    opacity: 0.2;
+    z-index: 1;
+  }
+    
+.middle-container {
+    background-color: #fff;
+    text-align: center;
+    padding: 80px 30px;
+  }
+  
+  .middle-container h2 {
+    font-size: 2.5em;
+    color: #a35d6a;
+    margin-bottom: 20px;
+  }
+  
+  .middle-container p {
+    font-size: 1.1em;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+.hobbies {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fef6f5;
+}
+
+.hobbies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;
+}
+  
+.hobby-card {
+    flex: 1 1 220px;
+    max-width: 220px;
+    position: relative;
+    perspective: 1000px;
+    min-height: 250px;
+}
+  
+.hobby-card .image-side,
+.hobby-card .text-side {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: opacity 0.4s ease;
+    background-color: #fbdedc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+.hobby-card .image-side img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+  
+.hobby-card .image-side p {
+    font-weight: bold;
+    color: #444;
+    margin: 0;
+}
+  
+.hobby-card .text-side {
+    opacity: 0;
+    pointer-events: none;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #333;
+}
+  
+.hobby-card:hover .image-side {
+    opacity: 0;
+    pointer-events: none;
+}
+  
+.hobby-card:hover .text-side {
+    opacity: 1;
+    pointer-events: auto;
+}
+  
+.my-work {
+    background-color: #fceeee;
+    padding: 60px 20px;
+    text-align: center;
+}
+  
+.work-content {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #444;
+}
+  
+.work-content blockquote {
+    font-style: italic;
+    color: #888;
+    margin-top: 20px;
+}
+
+.site-footer {
+    background-color: #f6d3d8;
+    color: #6a3b47;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    position: relative;
+}
+  
+.site-footer a {
+    color: #6a3b47;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+  
+.site-footer a:hover {
+    color: #a35d6a;
+}
+  
+.heart {
+    animation: pulse 1.5s infinite;
+    display: inline-block;
+}
+  
+@keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.9;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+}
+.footer-deer {
+    width: 90px;
+    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+  
+.footer-deer:hover {
+    animation: jump-pop 0.6s ease forwards;
+}
+
+@keyframes jump-pop {
+    0% { transform: translateY(0) rotate(0); }
+    30% { transform: translateY(-10px) rotate(-3deg); }
+    60% { transform: translateY(5px) rotate(2deg); }
+    100% { transform: translateY(0) rotate(0); }
+}
+  
+/* טאבלטים – עד 1024px */
+@media (max-width: 1024px) {
+    .hobby-card {
+      flex: 1 1 45%;
+      max-width: 45%;
+    }
+  }
+  
+  /* מובייל – עד 768px */
+  @media (max-width: 768px) {
+    .title-flex h1 {
+      font-size: 2.2em;
+      padding: 0 10px;
+    }
+
+    .plane-from-name {
+        width: 45px;
+        right: -40px;
+        top: -0.3em;
+      }
+      
+    .middle-container h2 {
+      font-size: 1.8em;
+    }
+  
+    .hobbies-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hobby-card {
+      width: 90%;
+      max-width: 300px;
+    }
+  
+    .work-content {
+      padding: 0 15px;
+    }
+  
+    .footer-deer {
+      width: 60px;
+      margin-top: 15px;
+    }
+  }
+  
+  
